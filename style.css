@@ -1,0 +1,217 @@
+/* Box sizing rules reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #220;
+	color: #eee;
+	/* reset */
+	margin: 0;
+	/* Set core body defaults */
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	counter-reset: h2;
+}
+
+/* Remove default margin */
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+dd {
+	margin-left: 1em;
+}
+
+p, mtext {
+	font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothiic Pro", HiraginoSans-W3, "Hiragino Sans W3", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "MS Gothic", "ＭＳ ゴシック", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 3em auto 0.25em;
+}
+
+h3 {
+	margin: 0.5em auto;
+	padding: 0.25em;
+	border-bottom: solid white 2px;
+	border-left: solid red 6px;
+}
+
+h4 {
+	margin: 0.5rem;
+	border-bottom: solid white 2px;
+}
+
+h5 {
+	font-size: 16px;
+	margin: 0 0.5rem;
+}
+
+h6 {
+	margin: 0;
+}
+
+section > p {
+	margin: 0 2rem;
+}
+
+h1 ~ p {
+	font-weight: bold;
+	text-align: center;
+}
+
+li > ul, li > ol {
+	padding-left: 20px;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+/* hrefを持つもの．a以外にMathML要素も含む */
+:any-link {
+	color: #88a3e8;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	text-indent: center;
+	margin: 0 auto;
+}
+
+caption {
+	caption-side: bottom;
+}
+
+th,
+td {
+	border: 1px solid #888;
+	padding: 8px 10px;
+	text-align: center;
+}
+
+b.color-1 {
+	color: red;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+dfn {
+	font-style: normal;
+	font-weight: bold;
+}
+
+text {
+	text-anchor: middle;
+	dominant-baseline: central;
+}
+
+math {
+	overflow-x: scroll;
+	overflow-wrap: break-word;
+}
+
+mtable {
+	math-style: normal;
+}
+
+/* 式変形, 連立方程式 */
+mtable[intent=":lines"], mtable[intent=":system-of-equations"] {
+	> mtr { 
+		> mtd {
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+		> mtd:first-child {
+			text-align: end;
+		}
+		> mtd:last-child {
+			text-align: start;
+		}
+	}
+}
+
+section.boss {
+	border: 1px solid blue;
+	> h2, > h3, > h4, > h5, > h6 {
+		background-color: darkblue;
+	}
+}
+dl.menu {
+	border: 1px solid red;
+	> dt {
+		background-color: darkred;
+	}
+}
+dl.shop {
+	border: 1px solid red;
+	> dt {
+		background-color: darkred;
+	}
+}
+dl.battles {
+	border: 1px solid green;
+	> dt {
+		background-color: darkgreen;
+	}
+}
+
+/* Media Queries */
+/* (Reset) Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
